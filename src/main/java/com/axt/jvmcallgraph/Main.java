@@ -11,7 +11,7 @@ class Main {
 
 	private static void callsToSystemExit() throws IOException {
 		CallGraphRequest callGraphRequest = new CallGraphRequest.Builder()
-				.addJarSource("/usr/lib/jvm/java-8-oracle/jre/lib/rt.jar")
+				.addJarSource("/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/rt.jar")
 				.addTargetMethod(x -> x.getClassName().equals("java/lang/System") && x.getName().equals("exit"))
 				.stopCondition(x -> x.getClassName().startsWith("java/"))
 				.prune(true)
